@@ -1,4 +1,3 @@
-use std::cmp::Ordering;
 use std::fs::File;
 use std::io::{self, BufRead, BufReader, Read};
 
@@ -12,7 +11,8 @@ fn count_calories(calories_list: Vec<String>) -> Vec<u32> {
 
 fn top_k_calories(calories_list: Vec<String>, k: usize) -> u32 {
     let mut tmp = count_calories(calories_list);
-    tmp.sort_unstable_by(|a, b| a.partial_cmp(b).unwrap_or(Ordering::Equal));
+    tmp.sort_unstable();
+
     tmp.iter().rev().take(k).sum()
 }
 
