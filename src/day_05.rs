@@ -60,7 +60,8 @@ fn crate_to_stack(crate_info: Vec<String>) -> Vec<Vec<String>> {
 }
 
 fn parse_move_cmd(cmd: &str) -> (u32, u32, u32) {
-    let amt: u32 = cmd.as
+    //let amt: u32 = cmd.as
+    (1, 1, 1)
 }
 
 pub fn part_1(filename: &str) -> Result<String, io::Error> {

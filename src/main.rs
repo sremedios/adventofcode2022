@@ -9,6 +9,7 @@ mod day_02;
 mod day_03;
 mod day_04;
 mod day_05;
+mod day_06;
 
 fn main() -> Result<(), io::Error> {
     let args: Vec<String> = env::args().collect();
@@ -49,6 +50,10 @@ fn main() -> Result<(), io::Error> {
         "05" => (
             day_05::part_1(input_filename)?,
             day_05::part_2(input_filename)?,
+        ),
+        "06" => (
+            day_06::part_1(input_filename)?,
+            day_06::part_2(input_filename)?,
         ),
         _ => ("Invalid argument".to_owned(), "Invalid arg".to_owned()),
     };
